@@ -1,3 +1,7 @@
 node_modules/
 dist/
+coverage/
+prisma/database.db
+prisma/database.db-journal
 .env
+public/tasks.csv
