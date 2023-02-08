@@ -21,7 +21,6 @@ export class ImportCsvService {
 		const linesPrase = this.stream.pipe(this.csvParse);
 		for await (const line of linesPrase) {
 			const [title, description] = line as Task[];
-
 			await fetch('http://localhost:3333/tasks', {
 				method: 'POST',
 				headers: {
