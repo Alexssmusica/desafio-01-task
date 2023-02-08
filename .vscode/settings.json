@@ -1,8 +1,7 @@
 {
     "files.exclude": {
         "**/.git": true,
-        "**/.DS_Store": true,
-        "package-lock.json": true,
+        "**/.DS_Store": true
     },
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
