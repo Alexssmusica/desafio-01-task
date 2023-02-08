@@ -4,6 +4,9 @@
   "main": "main.js",
   "license": "MIT",
   "type": "module",
+  "engines": {
+	"node": ">=18.x"
+},
   "scripts": {
     "dev": "tsx watch src/main.ts",
     "importCsc:dev": "tsx src/importCvc.ts",
