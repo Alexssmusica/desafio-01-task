@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Task {
-    id          String    @id
+    id          String    @id @default(uuid())
     title       String
     description String
     completedAt DateTime? @map("completed_at")
