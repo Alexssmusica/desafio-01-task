@@ -19,7 +19,7 @@ export class TaskService {
 		return output;
 	}
 
-	async getBoard(idTask: string): Promise<TasksProps> {
+	async getTask(idTask: string): Promise<TasksProps> {
 		const task = await this.taskRepository.get(idTask);
 		return {
 			id: task.id,

@@ -13,7 +13,7 @@ export class TaskController {
 
 		http.route('get', '/tasks/:id', async function (params: any, _body: any) {
 			const taskService = new TaskService(taskRepository);
-			const task = await taskService.getBoard(params.id);
+			const task = await taskService.getTask(params.id);
 			return task;
 		});
 
