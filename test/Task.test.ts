@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import { Task } from '../src/domain/entity/Task';
 
 test('Deve criar uma task', function () {

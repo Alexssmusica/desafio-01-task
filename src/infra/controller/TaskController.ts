@@ -8,13 +8,13 @@ export class TaskController {
 		http.route('get', '/tasks', async function (_params: any, _body: any) {
 			const taskService = new TaskService(taskRepository);
 			const tasks = await taskService.getTasks();
-			return tasks;
+			return { tasks };
 		});
 
 		http.route('get', '/tasks/:id', async function (params: any, _body: any) {
 			const taskService = new TaskService(taskRepository);
 			const task = await taskService.getTask(params.id);
-			return task;
+			return { task };
 		});
 
 		http.route(
