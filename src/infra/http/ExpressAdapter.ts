@@ -11,7 +11,7 @@ export default class ExpressAdapter implements HttpServer {
 		this.app = express();
 		this.app.use(cors());
 		this.app.use(express.json());
-		this.app.use((err: Error, request: Request, response: Response, _next: NextFunction) => {
+		this.app.use((err: Error, _request: Request, response: Response, _next: NextFunction) => {
 			if (err instanceof AppError) {
 				return response.status(err.statusCode).json({
 					message: err.message
