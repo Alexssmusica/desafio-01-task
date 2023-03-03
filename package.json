@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "tsx watch src/main.ts",
     "importCsc:dev": "tsx src/importCvc.ts",
-    "build": "npx tsc",
+    "build": "tsup src",
     "start": "node dist/main.js",
     "test": "npx vitest",
     "type": "tsc --project tsconfig.json --noEmit",
@@ -35,6 +35,7 @@
     "prettier": "^2.8.3",
     "prisma": "^4.9.0",
     "ts-node": "^10.9.1",
+    "tsup": "^6.6.3",
     "tsx": "^3.12.2",
     "typescript": "^4.9.5",
     "vitest": "^0.28.4"

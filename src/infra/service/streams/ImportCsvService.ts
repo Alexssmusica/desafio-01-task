@@ -1,5 +1,6 @@
 import { parse, Parser } from 'csv-parse';
 import fs from 'node:fs';
+import path from 'node:path';
 import { Task } from '../../../domain/entity/Task';
 
 export class ImportCsvService {
@@ -8,7 +9,8 @@ export class ImportCsvService {
 	private csvParse: Parser;
 
 	constructor() {
-		this.csvPath = new URL('./tasks.csv', import.meta.url);
+		const arquivo = path.resolve('tasks.csv');
+		this.csvPath = new URL(arquivo, import.meta.url);
 		this.stream = fs.createReadStream(this.csvPath);
 		this.csvParse = parse({
 			delimiter: ',',
