@@ -6,12 +6,12 @@ generator client {
 }
 
 datasource db {
-    provider = "mongodb"
+    provider = "sqlite"
     url      = env("DATABASE_URL")
 }
 
 model Task {
-    id          String    @id @default(uuid()) @map("_id")
+    id          String    @id @default(uuid())
     title       String
     description String
     completedAt DateTime? @map("completed_at")

@@ -5,3 +5,4 @@ prisma/database.db
 prisma/database.db-journal
 .env
 public/tasks.csv
+prisma-sqlite/database.db
