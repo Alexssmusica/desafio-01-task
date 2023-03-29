@@ -4,18 +4,16 @@ import path from 'node:path';
 import { Task } from '../../../domain/entity/Task';
 
 export class ImportCsvService {
-	private csvPath: URL;
 	private stream: fs.ReadStream;
 	private csvParse: Parser;
 
 	constructor() {
 		const arquivo = path.resolve('tasks.csv');
-		this.csvPath = new URL(arquivo, import.meta.url);
-		this.stream = fs.createReadStream(this.csvPath);
+		this.stream = fs.createReadStream(arquivo);
 		this.csvParse = parse({
 			delimiter: ',',
 			skipEmptyLines: true,
-			fromLine: 2 // skip the header line
+			fromLine: 2
 		});
 	}
 
