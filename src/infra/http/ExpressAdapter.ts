@@ -1,8 +1,8 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
-import { AppError } from '../../errors/AppError';
-import HttpServer from './HttpServer';
-import { Methods } from './types/Types';
+import { AppError } from '../../errors/AppError.js';
+import HttpServer from './HttpServer.js';
+import { Methods } from './types/Types.js';
 
 export default class ExpressAdapter implements HttpServer {
 	private app: Application;
@@ -17,6 +17,7 @@ export default class ExpressAdapter implements HttpServer {
 		this.app[method](url, async function (req: Request, res: Response) {
 			try {
 				const output = await callback(req.params, req.body);
+				console.log(`Servidor respondendo no process ${process.pid}`);
 				res.status(status).json(output);
 			} catch (error: any) {
 				if (error instanceof AppError) {
@@ -29,6 +30,8 @@ export default class ExpressAdapter implements HttpServer {
 	}
 
 	listen(port: number): void {
-		this.app.listen(port, () => console.log(`Servidor rest iniciado na porta ${port}.`));
+		this.app.listen(port, () =>
+			console.log(`Servidor rest iniciado na porta ${port}. process ${process.pid}`)
+		);
 	}
 }

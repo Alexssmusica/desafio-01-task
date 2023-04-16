@@ -1,5 +1,5 @@
-import { Task, TasksProps } from '../../domain/entity/Task';
-import TaskRepository from '../../domain/repository/TaskRepository';
+import { Task, TasksProps } from '../../domain/entity/Task.js';
+import TaskRepository from '../../domain/repository/TaskRepository.js';
 
 export class TaskService {
 	constructor(readonly taskRepository: TaskRepository) {}

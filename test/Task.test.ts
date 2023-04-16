@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { Task } from '../src/domain/entity/Task';
+import { Task } from '../src/domain/entity/Task.js';
 
 test('Deve criar uma task', function () {
 	const task = new Task({

@@ -1,4 +1,4 @@
-import HttpServer from '../http/HttpServer';
+import HttpServer from '../http/HttpServer.js';
 
 export default class AppController {
 	constructor(readonly httpServer: HttpServer) {

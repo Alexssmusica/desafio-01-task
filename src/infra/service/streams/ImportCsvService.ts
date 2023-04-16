@@ -1,7 +1,7 @@
 import { parse, Parser } from 'csv-parse';
 import fs from 'node:fs';
 import path from 'node:path';
-import { Task } from '../../../domain/entity/Task';
+import { Task } from '../../../domain/entity/Task.js';
 
 export class ImportCsvService {
 	private stream: fs.ReadStream;

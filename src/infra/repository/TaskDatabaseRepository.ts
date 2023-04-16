@@ -1,7 +1,7 @@
-import { Task } from '../../domain/entity/Task';
-import TaskRepository from '../../domain/repository/TaskRepository';
-import { AppError } from '../../errors/AppError';
-import { prisma } from '../database/PrismaInit';
+import { Task } from '../../domain/entity/Task.js';
+import TaskRepository from '../../domain/repository/TaskRepository.js';
+import { AppError } from '../../errors/AppError.js';
+import { prisma } from '../database/PrismaInit.js';
 
 export class TaskDatabaseRepository implements TaskRepository {
 	async create(task: Task): Promise<void> {

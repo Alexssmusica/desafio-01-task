@@ -1,7 +1,7 @@
-import { Task } from '../../domain/entity/Task';
-import TaskRepository from '../../domain/repository/TaskRepository';
-import HttpServer from '../http/HttpServer';
-import { TaskService } from '../service/TaskService';
+import { Task } from '../../domain/entity/Task.js';
+import TaskRepository from '../../domain/repository/TaskRepository.js';
+import HttpServer from '../http/HttpServer.js';
+import { TaskService } from '../service/TaskService.js';
 
 export class TaskController {
 	constructor(readonly http: HttpServer, readonly taskRepository: TaskRepository) {

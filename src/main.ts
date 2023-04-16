@@ -1,8 +1,8 @@
-import AppController from './infra/controller/AppController';
-import { TaskController } from './infra/controller/TaskController';
-import ExpressAdapter from './infra/http/ExpressAdapter';
-import { TaskDatabaseRepository } from './infra/repository/TaskDatabaseRepository';
-import Env from './infra/util/Env';
+import AppController from './infra/controller/AppController.js';
+import { TaskController } from './infra/controller/TaskController.js';
+import ExpressAdapter from './infra/http/ExpressAdapter.js';
+import { TaskDatabaseRepository } from './infra/repository/TaskDatabaseRepository.js';
+import Env from './infra/util/Env.js';
 
 const http = new ExpressAdapter();
 const taskRepository = new TaskDatabaseRepository();

@@ -1,4 +1,4 @@
-import { Task } from '../entity/Task';
+import { Task } from '../entity/Task.js';
 
 export default interface TaskRepository {
 	findAll(): Promise<Task[]>;

@@ -1,4 +1,4 @@
-import { ImportCsvService } from './infra/service/streams/ImportCsvService';
+import { ImportCsvService } from './infra/service/streams/ImportCsvService.js';
 
 async function run() {
 	const importCsvService = new ImportCsvService();

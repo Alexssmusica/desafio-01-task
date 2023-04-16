@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import { AppError } from '../../errors/AppError';
+import { AppError } from '../../errors/AppError.js';
 
 export interface TasksProps {
 	id?: string;

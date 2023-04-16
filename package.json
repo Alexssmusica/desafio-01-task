@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">=18.x"
+    "node": ">=14.x"
   },
   "scripts": {
     "dev": "tsx watch src/main.ts",
@@ -13,6 +13,7 @@
     "build": "tsup",
     "start": "node dist/main.js",
     "test": "vitest run",
+    "test:carga": "npx autocannon -c 500 -d 30 --workers 10 --renderStatusCodes --latency --warmup [-c 1 -d 2] localhost:3333/tasks",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
@@ -34,6 +35,7 @@
     "@typescript-eslint/parser": "^5.56.0",
     "@vitest/coverage-c8": "^0.29.7",
     "@vitest/ui": "^0.29.7",
+    "autocannon": "7.10.0",
     "cors": "^2.8.5",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
