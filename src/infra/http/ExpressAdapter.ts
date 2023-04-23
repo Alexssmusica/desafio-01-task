@@ -31,7 +31,7 @@ export default class ExpressAdapter implements HttpServer {
 
 	listen(port: number): void {
 		this.app.listen(port, () =>
-			console.log(`Servidor rest iniciado na porta ${port}. process ${process.pid}`)
+			console.log(`🚀 Servidor rest iniciado na porta ${port}. process ${process.pid}`)
 		);
 	}
 }

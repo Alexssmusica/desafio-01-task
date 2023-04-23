@@ -14,11 +14,11 @@ export class Task {
 	private props: TasksProps;
 	constructor(props: TasksProps) {
 		this.props = props;
-		if (this.props.title === '') throw new AppError('Title is required');
-		if (this.props.description === '') throw new AppError('Description is required');
-		if (!this.props.id) this.props.id = randomUUID();
-		if (!this.props.createdAt) this.props.createdAt = new Date();
-		if (!this.props.updatedAt) this.props.updatedAt = new Date();
+		if (!this.props.title) throw new AppError('Title is required');
+		if (!this.props.description) throw new AppError('Description is required');
+		this.props.id = props.id ?? randomUUID();
+		this.props.createdAt = props.createdAt ?? new Date();
+		this.props.updatedAt = props.updatedAt ?? new Date();
 	}
 
 	get id() {
